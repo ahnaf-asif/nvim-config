@@ -8,7 +8,20 @@ if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
-
+-- vim.filetype.add {
+--   pattern = {
+--     ["%.html"] = function(_, bufnr)
+--       -- Optionally inspect file content to decide dynamically
+--       local lines = vim.api.nvim_buf_get_lines(bufnr, 0, 10, false)
+--       for _, line in ipairs(lines) do
+--         if line:match "{{.*}}" then
+--           return "gotmpl"
+--         end
+--       end
+--       return "html" -- fallback to normal HTML
+--     end,
+--   },
+-- }
 vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
