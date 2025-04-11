@@ -6,9 +6,9 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map({ "i", "n" }, "sf", "<Cmd> w <cr>", { desc = "Save file" })
-map({ "i", "n" }, "sa", "gg0vG$", { desc = "Select all" })
-map({ "i", "n" }, "sb", "v%", { desc = "Select block" })
+map({ "n" }, "sf", "<Cmd> w <cr>", { desc = "Save file" })
+map({ "n" }, "sa", "gg0vG$", { desc = "Select all" })
+map({ "n" }, "sb", "v%", { desc = "Select block" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 --
 -- vim.keymap.set({ "n", "t" }, "hsp", function()

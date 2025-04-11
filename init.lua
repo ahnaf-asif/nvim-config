@@ -26,6 +26,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
+-- Debounced auto-save for .tex files
 -- load plugins
 require("lazy").setup({
   {
