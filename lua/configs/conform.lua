@@ -4,6 +4,8 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     go = { "gopls" },
+    cpp = { "clang_format" },
+    c = { "clang_format" },
   },
 
   format_on_save = {

@@ -2,6 +2,7 @@ return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot", -- Lazy load on :Copilot command
   event = "InsertEnter", -- or "BufReadPre" to load earlier
+  -- lazy = true,
   config = function()
     require("copilot").setup {
       suggestion = {
