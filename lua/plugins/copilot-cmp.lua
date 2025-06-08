@@ -8,7 +8,7 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<C-l>", -- change if you want
+          accept = "<C-a>", -- change if you want
           next = "<C-]>",
           prev = "<C-[>",
           dismiss = "<C-\\>",

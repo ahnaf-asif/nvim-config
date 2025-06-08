@@ -3,8 +3,14 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
+    javascript = { "prettier" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
     go = { "gopls" },
-    cpp = { "clang_format" },
+    python = { "black" },
+    cpp = {
+      "clang_format",
+    },
     c = { "clang_format" },
   },
 

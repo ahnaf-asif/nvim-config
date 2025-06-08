@@ -19,8 +19,8 @@ end
 lspconfig.gopls.setup {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
-  cmd = {"gopls"},
-  filetype={"go", "gomod", "gowork", "gotempl"},
+  cmd = { "gopls" },
+  filetype = { "go", "gomod", "gowork", "gotempl" },
   settings = {
     gopls = {
       completeUnimported = true,
@@ -30,9 +30,32 @@ lspconfig.gopls.setup {
       usePlaceholders = true,
       analyses = {
         unusedparams = true,
-      }
-    }
-  }
+      },
+    },
+  },
+}
+
+lspconfig.pyright.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off", -- or "strict", or "off"
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+      },
+    },
+  },
+}
+
+lspconfig.ts_ls.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  cmd = { "typescript-language-server", "--stdio" },
 }
 
 -- configuring single server, example: typescript
